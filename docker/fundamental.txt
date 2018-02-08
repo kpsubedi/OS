@@ -5,5 +5,5 @@
 -p 8080:8080 map from host to container port
 
 We will get unique id.
-
+# docker start web
 
