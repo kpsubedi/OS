@@ -163,7 +163,7 @@ In a regular UNIX filesystem, the inode stores all the metadata pertaining to th
 Container
 =========
 https://raydenchia.com/linux-containers-lxc/
-
+https://www.youtube.com/watch?v=zeMlsYJUgnY
 
 References
 https://hammertux.github.io/slab-allocator
