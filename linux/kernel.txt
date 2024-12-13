@@ -1,6 +1,9 @@
 util-linux package 
 https://www.kernel.org/pub/linux/utils/util-linux/
 
+Linux Kernel Documentation: https://elixir.bootlin.com/linux/v6.12.4/source/Documentation
+
+
 root@kali:~/Documents/OSCMP515# lscpu
 Architecture:                    x86_64
 CPU op-mode(s):                  32-bit, 64-bit
@@ -114,6 +117,13 @@ need the Linux kernel version 3.15 or above to benefit from it. It enables you t
 kernel functions by using the bpf syscall. eBPF is implemented as an in-kernel virtual machine using a custom 64-bit 
 RISC instruction set. 
 
+
+File System
+===========
+In a regular UNIX filesystem, the inode stores all the metadata pertaining to the file 
+- time stamps
+- block maps
+- extended attributes 
 
 
 
