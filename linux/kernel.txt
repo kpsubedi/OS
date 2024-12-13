@@ -121,4 +121,7 @@ References
 https://hammertux.github.io/slab-allocator
 https://events.static.linuxfound.org/sites/events/files/slides/slaballocators.pdf
 https://elixir.bootlin.com/linux/v5.3.13/source
+https://elixir.bootlin.com/linux/v6.13-rc2/source/security/inode.c
+https://elixir.bootlin.com/linux/v6.12.4/source/Documentation
+
 
