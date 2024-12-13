@@ -3,6 +3,33 @@ https://www.kernel.org/pub/linux/utils/util-linux/
 
 Linux Kernel Documentation: https://elixir.bootlin.com/linux/v6.12.4/source/Documentation
 
+https://elixir.bootlin.com/linux/v6.12.4/source/include/linux
+=============================================================
+fs.h
+- struct inode
+- struct iattr
+- struct address_space
+- struct file 
+- struct kiocb
+- struct address_space_operations
+- 
+
+rbtree_types.h
+- struct rb_root_cached
+
+types.h
+- struct list_head
+
+pid.h
+- struct pid 
+
+
+llist.h
+- struct llist_node 
+
+dcache.h
+- struct dentry 
+
 
 root@kali:~/Documents/OSCMP515# lscpu
 Architecture:                    x86_64
