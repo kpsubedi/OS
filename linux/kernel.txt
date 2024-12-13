@@ -99,6 +99,14 @@ root@kali:~/Documents/OSCMP515# modprobe --show-depends crc16
 insmod /lib/modules/5.2.0-kali2-amd64/kernel/lib/crc16.ko 
 
 
+A Modern Way to Extend the Kernel: eBPF
+=======================================
+An increasingly popular way to extend kernel functionality is eBPF. Originally known as Berkely Packet Filter (BPF), nowadays 
+the kernel project and technology os commonly known as eBPF. Technically, eBPF is a feature of the Linux kernel, and you'll
+need the Linux kernel version 3.15 or above to benefit from it. It enables you to safely and efficiently extend the Linux 
+kernel functions by using the bpf syscall. eBPF is implemented as an in-kernel virtual machine using a custom 64-bit 
+RISC instruction set. 
+
 
 
 
