@@ -39,4 +39,66 @@ Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtr
                                  sor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase bmi1 avx2 bmi2 invp
                                  cid rdseed clflushopt arat md_clear flush_l1d arch_capabilities
 
+-----
+root@kali:~/Documents/OSCMP515# cat /proc/cpuinfo 
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 165
+model name	: Intel(R) Core(TM) i7-10700T CPU @ 2.00GHz
+stepping	: 5
+cpu MHz		: 1991.997
+cache size	: 16384 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq monitor ssse3 cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single fsgsbase bmi1 avx2 bmi2 invpcid rdseed clflushopt arat md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs
+bogomips	: 3983.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+----------Memory Management----------
+root@kali:~/Documents/OSCMP515# grep MemTotal /proc/meminfo 
+MemTotal:        4041600 kB
+root@kali:~/Documents/OSCMP515# grep VmallocTotal /proc/meminfo 
+VmallocTotal:   34359738367 kB
+root@kali:~/Documents/OSCMP515# grep Huge /proc/meminfo 
+AnonHugePages:    428032 kB
+ShmemHugePages:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+root@kali:~/Documents/OSCMP515# 
+
+---------Kernel Modules-----------
+Find all kernel modules in running kernel
+# find /lib/modules/$(uname -r) -type f -name '*.ko'
+# lsmod
+
+root@kali:~/Documents/OSCMP515# modprobe --show-depends ahci
+insmod /lib/modules/5.2.0-kali2-amd64/kernel/drivers/scsi/scsi_mod.ko 
+insmod /lib/modules/5.2.0-kali2-amd64/kernel/drivers/ata/libata.ko 
+insmod /lib/modules/5.2.0-kali2-amd64/kernel/drivers/ata/libahci.ko 
+insmod /lib/modules/5.2.0-kali2-amd64/kernel/drivers/ata/ahci.ko 
+root@kali:~/Documents/OSCMP515# 
+root@kali:~/Documents/OSCMP515# modprobe --show-depends crc16
+insmod /lib/modules/5.2.0-kali2-amd64/kernel/lib/crc16.ko 
+
+
+
+
 
