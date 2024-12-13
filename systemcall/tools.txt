@@ -140,6 +140,11 @@ root@kali:~/Documents/OSCMP515# ls
 hello-32  hello-32.asm  hello-32.o
 root@kali:~/Documents/OSCMP515# 
 
+root@kali:~/Documents/OSCMP515# ./hello-32 
+Welcome to OSroot@kali:~/Documents/OSCMP515# file hello-32
+hello-32: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+root@kali:~/Documents/OSCMP515#
+
 
 
 
