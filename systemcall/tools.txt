@@ -188,3 +188,40 @@ root@kali:~/Documents/OSCMP515# ldd /bin/ls
 	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f70d4aba000)
 root@kali:~/Documents/OSCMP515#
 =================================================
+root@kali:~/Documents/OSCMP515# cat test.S 
+.data 
+
+msg:
+    .ascii "Welcome to Operating System!\n"
+    len = . - msg
+
+.text 
+
+    .global _start
+
+_start:
+    movq $1, %rax
+    movq $1, %rdi
+    movq $msg, %rsi
+    movq $len, %rdx
+    syscall
+
+    movq $60, %rax
+    xorq %rdi, %rdi
+    syscall
+
+===================================================
+We can compile the above assembly program with the following commands:
+root@kali:~/Documents/OSCMP515# ls
+hello-32  hello-32.asm  hello-32.o  test.S
+root@kali:~/Documents/OSCMP515# gcc -c test.S 
+root@kali:~/Documents/OSCMP515# ls
+hello-32  hello-32.asm  hello-32.o  test.o  test.S
+root@kali:~/Documents/OSCMP515# ld -o test test.o
+root@kali:~/Documents/OSCMP515# ls
+hello-32  hello-32.asm  hello-32.o  test  test.o  test.S
+root@kali:~/Documents/OSCMP515# file test
+test: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, not stripped
+root@kali:~/Documents/OSCMP515# ./test
+Welcome to Operating System!
+root@kali:~/Documents/OSCMP515#
