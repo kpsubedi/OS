@@ -84,6 +84,13 @@ Hugepagesize:       2048 kB
 Hugetlb:               0 kB
 root@kali:~/Documents/OSCMP515# 
 
+The Buddy Allocator: The basic idea of a buddy allocator is fairly simple. Physical memory is borken up into large chunks of 
+memory where each chunk is a "page order" (i.e., 2^n * PAGE_SIZE). Whenever a block of memory needs to be allocated and the size 
+of it is not available, one big chunk is halved continuously, until a chunk of the correct size is found. At this point, of the 
+two halves, also known as "buddies", one will be use to satisfy the allocation request, and the other will remain free. At a 
+later stage, if and when that memory is free'd, the two buddies (if both free) will coalesce forming a larger chunk of free memory.
+
+
 ---------Kernel Modules-----------
 Find all kernel modules in running kernel
 # find /lib/modules/$(uname -r) -type f -name '*.ko'
@@ -109,4 +116,8 @@ RISC instruction set.
 
 
 
+
+References
+https://hammertux.github.io/slab-allocator
+https://events.static.linuxfound.org/sites/events/files/slides/slaballocators.pdf
 
