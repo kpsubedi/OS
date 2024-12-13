@@ -1,3 +1,7 @@
+Manuals describe the architecture and programming environment of the Intel 64 and IA-32 architectures.
+https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
+
+
 util-linux package 
 https://www.kernel.org/pub/linux/utils/util-linux/
 
