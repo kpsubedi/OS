@@ -253,7 +253,7 @@ _start:
     syscall
 
 section .data
-    hello_world: db 'Welcome to OS\n'
+    hello_world: db 'Welcome to OS', 0xa
     length: equ $-hello_world
 ===================================================
 root@kali:~/Documents/OSCMP515# ls
