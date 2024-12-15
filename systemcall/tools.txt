@@ -206,6 +206,69 @@ root@kali:~/Documents/OSCMP515# ldd /bin/ls
 	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x00007f70d4aba000)
 root@kali:~/Documents/OSCMP515#
 ================ 64-bit program ============
+rax => System call number
+rdi => 1st Argument 
+rsi => 2nd Argument 
+rdx => 3rd Argument 
+r10 => 4th Argument
+r8 => 5th Argument
+r9 => 6th Argument
+
+return value of the syscall in rax.
+
+syscall number of write is 1.
+
+-----------------
+# man 2 write
+NAME
+       write - write to a file descriptor
+
+SYNOPSIS
+       #include <unistd.h>
+
+       ssize_t write(int fd, const void *buf, size_t count);
+----------------
+RAX = System call number 
+RDI = STDOUT
+RSI = Pointer to "Welcome to Operating System"
+RDX = Length
+--------------------------------------------
+global _start
+
+section .text
+
+_start:
+
+    ; print on screen
+    mov rax, 1
+    mov rdi, 1
+    mov rsi, hello_world
+    mov rdx, length
+    syscall
+
+    ; exit gracefully
+
+    mov rax, 60
+    mov rdi, 17
+    syscall
+
+section .data
+    hello_world: db 'Welcome to OS\n'
+    length: equ $-hello_world
+===================================================
+root@kali:~/Documents/OSCMP515# ls
+hello-32  hello-32.asm  hello-32.o  hello-64.nasm  test  test.o  test.S
+root@kali:~/Documents/OSCMP515# nasm -felf64 hello-64.nasm -o hello-64.o
+root@kali:~/Documents/OSCMP515# ls
+hello-32  hello-32.asm  hello-32.o  hello-64.nasm  hello-64.o  test  test.o  test.S
+root@kali:~/Documents/OSCMP515# ld hello-64.o -o hello-64 
+root@kali:~/Documents/OSCMP515# ls
+hello-32  hello-32.asm  hello-32.o  hello-64  hello-64.nasm  hello-64.o  test  test.o  test.S
+root@kali:~/Documents/OSCMP515# ./hello-64
+Welcome to OS\nroot@kali:~/Documents/OSCMP515# echo $?
+17
+
+----------------------------
 root@kali:~/Documents/OSCMP515# cat test.S 
 .data 
 
@@ -227,8 +290,7 @@ _start:
     movq $60, %rax
     xorq %rdi, %rdi
     syscall
-
-===================================================
+----------------------------
 We can compile the above assembly program with the following commands:
 root@kali:~/Documents/OSCMP515# ls
 hello-32  hello-32.asm  hello-32.o  test.S
