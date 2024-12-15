@@ -6,3 +6,9 @@ Privilege Separation
 What are the technical controls we have to achieve the privilege separation?
 
 - Discretionary Access Control (DAC): implemented in UNIX as file permission 
+
+
+
+Resources
+=========
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux_atomic_host/7/html/container_security_guide/linux_capabilities_and_seccomp#linux_capabilities
