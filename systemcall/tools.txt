@@ -130,6 +130,24 @@ valid output formats for -f are (`*' denotes default):
     macho     MACHO (short name for MACHO32)
     win       WIN (short name for WIN32)
 ===============================================
+root@kali:~/Documents/OSCMP515# cat /usr/include/x86_64-linux-gnu/asm/
+a.out.h            ioctl.h            param.h            setup.h            termios.h
+auxvec.h           ioctls.h           perf_regs.h        shmbuf.h           types.h
+bitsperlong.h      ipcbuf.h           poll.h             sigcontext32.h     ucontext.h
+boot.h             ist.h              posix_types_32.h   sigcontext.h       unistd_32.h
+bootparam.h        kvm.h              posix_types_64.h   siginfo.h          unistd_64.h
+bpf_perf_event.h   kvm_para.h         posix_types.h      signal.h           unistd.h
+byteorder.h        kvm_perf.h         posix_types_x32.h  socket.h           unistd_x32.h
+debugreg.h         ldt.h              prctl.h            sockios.h          vm86.h
+e820.h             mce.h              processor-flags.h  statfs.h           vmx.h
+errno.h            mman.h             ptrace-abi.h       stat.h             vsyscall.h
+fcntl.h            msgbuf.h           ptrace.h           svm.h              
+hw_breakpoint.h    msr.h              resource.h         swab.h             
+hwcap2.h           mtrr.h             sembuf.h           termbits.h         
+root@kali:~/Documents/OSCMP515# cat /usr/include/x86_64-linux-gnu/asm/
+
+
+===============================================
 root@kali:~/Documents/OSCMP515# cat hello-32.asm 
 ; helloworld.asm
 ; 
