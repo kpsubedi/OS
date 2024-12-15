@@ -255,6 +255,9 @@ _start:
 section .data
     hello_world: db 'Welcome to OS', 0xa
     length: equ $-hello_world
+------------------------------
+objdump -M intel -d hello-64
+
 ===================================================
 root@kali:~/Documents/OSCMP515# ls
 hello-32  hello-32.asm  hello-32.o  hello-64.nasm  test  test.o  test.S
