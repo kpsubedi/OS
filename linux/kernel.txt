@@ -1,3 +1,7 @@
+Slides and Reading Resources
+============================
+https://www.os-book.com/OS10/slide-dir/index.html
+https://wiki.osdev.org/Expanded_Main_Page
 Manuals describe the architecture and programming environment of the Intel 64 and IA-32 architectures.
 https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html
 
@@ -6,6 +10,7 @@ https://wiki.osdev.org/Kernel
 
 util-linux package 
 https://www.kernel.org/pub/linux/utils/util-linux/
+
 
 Linux Kernel Documentation: https://elixir.bootlin.com/linux/v6.12.4/source/Documentation
 
