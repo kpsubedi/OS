@@ -1,3 +1,10 @@
+- Privilege Separation Concepts
+- Implementation: Technical Controls
+  - DAC: *NIX permissions and facl
+  - LP: seccomp, capabilities
+  - isolation: hardware assisted virtualization, chroot, namespaces, lxc
+
+
 Privilege Separation
 --------------------
 - Least Privilege (LP)
