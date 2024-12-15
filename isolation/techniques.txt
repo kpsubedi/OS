@@ -1,2 +1,8 @@
 Privilege Separation
 --------------------
+- Least Privilege (LP)
+- Segregation of Duties (SoD)
+
+What are the technical controls we have to achieve the privilege separation?
+
+- Discretionary Access Control (DAC): implemented in UNIX as file permission 
