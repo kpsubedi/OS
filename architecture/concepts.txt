@@ -1,0 +1,22 @@
+Byte Ordering
+=============
+How should bytes within a multi-byte word be ordered in memory?
+
+- Big Endian: Sun, PPC Mac, Internet
+  - Least significant byte has highest address
+- Little Endian: x86
+  - Least significant byte has lowest address
+
+E.g., 0x01234567
+Big Endian
+  0x01000000 : 01
+  0x01000001 : 23
+  0x01000002 : 45
+  0x01000003 : 67
+Little Endian
+  0x01000000 : 67
+  0x01000001 : 45
+  0x01000002 : 23
+  0x01000003 : 01
+
+  
