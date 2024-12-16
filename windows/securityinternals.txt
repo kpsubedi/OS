@@ -1,1 +1,5 @@
 https://github.com/tyranid/windows-security-internals
+
+https://github.com/googleprojectzero/sandbox-attacksurface-analysis-tools
+
+
