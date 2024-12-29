@@ -77,10 +77,6 @@ int main(int argc, char *argv[]) {
     exit(EXIT_SUCEESS);
 }
 ------------------
-└─$ size first
-   text    data     bss     dec     hex filename
-   1460     592       8    2060     80c first
--------------------
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -104,4 +100,8 @@ int main(int argc, char **argv) {
 $cc first.c -o first
 $cc second.c - second 
 $./second ./first
-
+------------------
+└─$ size first
+   text    data     bss     dec     hex filename
+   1460     592       8    2060     80c first
+-------------------
