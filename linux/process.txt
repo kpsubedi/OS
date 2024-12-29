@@ -62,3 +62,42 @@ System administrators can set the value higher via /proc/sys/kernel/pid_max, tre
 compatibility.
 
 The kernel allocates process IDs to processes in a stricly linear fashion. 
+
+
+=================
+man 2 fork
+man 2 execve
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    for(size_t j = 0; j < argc; j++)
+        printf("argv[%zu]: %s\n", j, argv[j]);
+    exit(EXIT_SUCEESS);
+}
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+
+int main(int argc, char **argv) {
+    static char *newargv[] = { NULL, "Opertating System" , " for MSCIT", NULL };
+    static char *newenviron[] = { NULL };
+
+    if (argc != 2) {
+        fprintf(stderr, "Usage: %s <file-to-execute>\n", argv[0]);
+        exit(EXIt_FAILURE);
+    }
+
+    newargv[0] = argv[1];
+    execve(argv[1], newargv, newenviron);
+    perror("execve"); /* execve() returns only on error/*
+    exit(EXIT_FAILURE);
+}
+
+$cc first.c -o first
+$cc second.c - second 
+$./second ./first
+
