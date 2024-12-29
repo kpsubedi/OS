@@ -17,3 +17,18 @@ Programs, processes, and Threads
 A binary is compiled, executable code lying dormant on a storage medium such as a disk. Colloquially, we may also use the 
 term program; large and significant binaries we might call applications. /bin/pwd and /usr/bin/X11 are both binaries. 
 
+A process is a running program. A process includes the binary image, loaded into memory, but also much more: an instance of 
+virtualized memory, kernel resoruces such as open files, a security context such as an associated user, and one or more
+threads. 
+A thread is the unit of activity inside of a process. Each thread has its own virtualized processor, which includes a stack, 
+processor state as resgisters, and an instruction pointer. 
+
+In a single threaded process, the process is the thread. There is one instance of virtualized memory and one virtualized 
+processor. 
+
+In a multithreaded process, there are multiple threads. As the virtualization of memory is associated with the process, 
+the threads all share the same memory address space.
+
+The Process ID
+--------------
+
