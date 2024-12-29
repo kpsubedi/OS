@@ -1,0 +1,19 @@
+Process Management
+------------------
+- most fundamental abstraction in a Unix/Linux system.
+- An object code in execution - active, alive, running programs- Processes are more than just assembly language; they consist
+  data, resoruces, state, and a virtualized computer.
+
+  we will discuss the fundamentals of the process, from creation to termination.
+
+- Unix took an interesting path, one seldom traveled, separating the creation of a new process from the act of loading
+  a new binary image.Although the two tasks are performed in tandem much of the time, the division has allowed a great 
+  deal of freedom for experimentation and evolution for each of the tasks. 
+- While most operating systems offer a single system call to start up a new program, Unix requires two: a fork and an exec. 
+
+
+Programs, processes, and Threads
+--------------------------------
+A binary is compiled, executable code lying dormant on a storage medium such as a disk. Colloquially, we may also use the 
+term program; large and significant binaries we might call applications. /bin/pwd and /usr/bin/X11 are both binaries. 
+
