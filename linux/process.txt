@@ -67,7 +67,7 @@ The kernel allocates process IDs to processes in a stricly linear fashion.
 =================
 man 2 fork
 man 2 execve
-
+------------------
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -76,7 +76,11 @@ int main(int argc, char *argv[]) {
         printf("argv[%zu]: %s\n", j, argv[j]);
     exit(EXIT_SUCEESS);
 }
-
+------------------
+└─$ size first
+   text    data     bss     dec     hex filename
+   1460     592       8    2060     80c first
+-------------------
 
 #include <stdio.h>
 #include <stdlib.h>
