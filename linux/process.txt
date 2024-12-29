@@ -31,4 +31,31 @@ the threads all share the same memory address space.
 
 The Process ID
 --------------
+- Each process is represented by a unique identifier, the process ID (pid). 
+- The pid is guaranteed to be unique at any single point in time. 
 
+The idle process, which is the process that the kernel "runs" when there are no other runnable processes, has the pid 0.
+The first process that the kernel executes after booting the system, called the init process, has the pid 1.
+
+Unless the user explicitly tells the kernel what process to run (through the init kernel command-line parameter), 
+the kernel has to identify a suitable init process on its own - a rare example where the kernel dictates policy. 
+The Linux kernel tried four executables, ih the following order:
+* /sbin/init: The preferred and most likely location for the init process.
+* /etc/init: Another likely location for the init process.
+* /bin/init: A fallback location for the init process.
+* /bin/sh: The location of the Bourne shell, which the kernel tried to run if it fails to find an init process.
+
+The first of these processes that exists is executed as the init process. If all four processes fail to execute, 
+the Linux kernel halts the system with a panic. 
+
+After the handoff from the kernel, the init process handles the remainer of the boot process. 
+Typically, this includes initializing the system, starting various services, and launching a login program.
+
+Process ID Allocation
+---------------------
+By default, the kernel imposes a maximum process ID value of 32768 (2 ** 16-1). This is for compatiablity 
+with older Unix systems, which used signed 16-bit types for process IDs. 
+System administrators can set the value higher via /proc/sys/kernel/pid_max, treading a larger pid space for reduced 
+compatibility.
+
+The kernel allocates process IDs to processes in a stricly linear fashion. 
