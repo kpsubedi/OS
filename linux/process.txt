@@ -63,6 +63,17 @@ compatibility.
 
 The kernel allocates process IDs to processes in a stricly linear fashion. 
 
+The Process Hierarcy
+--------------------
+The process that spawns a new process is known as the parent; the new process is known as the child. Every process is 
+spawned from another process (exccept, of course, the init process). Therefore, every child has a parent. This 
+relationship is recorded in each process's parent process ID (ppid), which is the pid of the child's parent. 
+
+Each process is owned by a user and a group. This ownership is used to control access rights to resources. To the kernel,
+users and groups are mere integer values. Through the files /etc/passwd and /etc/group, these integers are mapped to the 
+human-readable names with which Unix users are familiar, such as the user root or the group wheel (generally speaking, the
+Linux kernel has no interest in human-readable strings, and prefers to identify objects with integers). 
+Each child process inhertis its parent's user and group ownership.
 
 =================
 man 2 fork
