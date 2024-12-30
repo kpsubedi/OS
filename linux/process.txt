@@ -93,6 +93,19 @@ $./processinfo
 =================
 man 2 fork
 man 2 execve
+
+Running a New Process
+---------------------
+- In Unix, the act of loading into memory and executing a program image is separate from the act of creating a new process.
+- One system call loads a binary program into memory, replacing the previous contents of the address space, and begins 
+  execution of the new program. This is called executing a new program, and the functionality is provided by the exec 
+  family of calls.
+
+- A different system call is used to create a new process, which initially is a near-duplicate of its parent process. 
+- Often, the new process immediately executes a new program. The act of creating a new process is called forking, and 
+  this functionality is provided by the fork() system call. 
+- Two acts - first a fork to create a new process, and then an exec to load a new binary into that process - are thus 
+  required to execute a new program in a new process. 
 ------------------
 #include <stdio.h>
 #include <stdlib.h>
