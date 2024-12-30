@@ -123,7 +123,13 @@ The fork() System Call
 * Process resource utilizations (getrusage(2)) and CPU time counters (times(2)) are reset to zero in the child.
 * The child's set of pending signals is initially empty (sigpending(2)).
 * The child does not inherit semaphore adjustments from its parent (semop(2)).
-* The 
+* The child does not inherit process-associated record locks from its parent (fcntl(2)). (On the other hand, it does 
+  inherit fcntl(2) open file description locks and flock(2) locks from its parent.)
+* The child does not inherit timers from its parent (setitimer(2), alarm(2), timer_create(2)).
+* The child does not inherit outstanding asynchronous I/O operations from its parent (aio_read(3), aio_write(3)), nor does
+  it inherit any asynchronous I/O contexts from its parent (see io_setup(2)).
+
+
 SYNOPSIS
 #include <unistdd.h>
 
