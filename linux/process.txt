@@ -281,4 +281,10 @@ Orphans and Zombies
   fill the kernel process table, preventing the creation of new processes. Since the zombies can't be killed by a 
   signal, the only way to remove them from the system is to kill their parent (or wait for it to exit), at which 
   time the zombies are adopted and waited on by init, and consequently removed from the system.
+- These semantics have important implications for the design of long-lived parent processes, such as network servers
+  and shells, that create numerous children. To put things another way, in such applications, a parent process should
+  perform wait() calls in order to ensure that dead children are always removed from the system, rather than becoming 
+  long-lived zombies. The parent may perform such wait() calls either synchronously, or asynchronously, in response 
+  to delivery of the SIGCHLD signal.
+
 
