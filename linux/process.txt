@@ -208,3 +208,10 @@ int main() {
   this is a copy for the child; the parent and the child do not share these portions of memory. The parent and the 
   child do share the text segment, however.
 
+- Modern implementations don't perform a complete copy of the parent's data, stack, and heap, since a fork() is often
+  followed by an exec(). Instead, a technique called copy-on-write (COW) is used. These regions are shared by the
+  parent and the child and have their protection changed by the kernel to read-only. If either process tries to
+  modify these reasons, the kernel then makes a copy of that piece of memory only, typically a "page" in a virtual
+  memory system.
+
+
