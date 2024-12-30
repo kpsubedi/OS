@@ -197,3 +197,14 @@ int main() {
         return 0;
 }
 -------------------------
+- The reason the child's process ID is returned to the parent is that a process can have more than one child, and 
+  there is no function that allows a process to obtain the process IDs of its children. The reason fork() returns 
+  0 to the child is that a process can have only a single parent, and the child can always call getppid() to obtain 
+  the process ID of its parent. (Process ID 0 is reserved for use by the kernel, so it's not possible for 0 to be 
+  the process ID of a child.)
+
+- Both the child and the parent continue executing with the instruction that follows the call to fork(). The child is 
+  a copy of the parent. For example, the child gets a copy of the parent's data space, heap, and stack. Note that 
+  this is a copy for the child; the parent and the child do not share these portions of memory. The parent and the 
+  child do share the text segment, however.
+
