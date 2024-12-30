@@ -148,6 +148,9 @@ $man 2 fork
 
 The fork() System Call
 ----------------------
+- The new process created by fork() is called the child process. This function is called once but returns twice. The 
+  only difference in the returns is that the return value in the child is 0, whereas the return value in the parent 
+  is the process ID of the new child. 
 - fork() creates a new process by duplicating the calling process. The new process is referred to as the child process. 
   The calling process is referred to as the parent process.
 - The child process and the parent process run in separate memory spaces. At the time of fork() both memory spaces have the 
@@ -184,8 +187,10 @@ int main() {
 
         if (pid > 0 )
                 printf("I am the parent of pid=%d!\n", pid);
-        else if (!pid) 
+        else if (!pid) {
                 printf("I am the child!\n");
+                printf("My parent process id = %d!\n", getpid());
+                }
         else if (pid == -1)
                 perror("fork");
 
