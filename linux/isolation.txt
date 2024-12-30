@@ -1,0 +1,5 @@
+namespaces
+----------
+man 7 namespaces
+
+- A namespace wraps 
