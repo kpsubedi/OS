@@ -75,6 +75,21 @@ human-readable names with which Unix users are familiar, such as the user root o
 Linux kernel has no interest in human-readable strings, and prefers to identify objects with integers). 
 Each child process inhertis its parent's user and group ownership.
 
+https://man7.org/linux/man-pages/man2/getpid.2.html
+----processinfo.c----
+#include <unistd.h>
+#include <stdio.h>
+
+int main() {
+        printf("My pid=%jd\n", getpid());
+        printf("My Parents's pid=%jd\n", getppid());
+
+        return 0;
+}
+----------------
+$gcc processinfo.c -o processinfo
+$./processinfo
+
 =================
 man 2 fork
 man 2 execve
