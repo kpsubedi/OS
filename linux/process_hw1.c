@@ -20,3 +20,6 @@ int main() {
 
         return 0;
 }
+/* $gcc process_hw1.c -o hw1 
+   $./hw1
+        */
