@@ -1,2 +1,6 @@
 Introduction
 ------------
+- The computer industry is undergoing, if not another revolution, certainly a vigorous shaking-up. The major chip manufactures have, for the time being at
+least, given up trying to make processors run faster. Moore's Law has not been repealed: each year, more and more transistors fit into the same space, but 
+their clock speed cannot be increased without overheating. 
+- Instead, 
