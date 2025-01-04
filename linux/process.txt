@@ -288,3 +288,10 @@ Orphans and Zombies
   to delivery of the SIGCHLD signal.
 
 
+========InterProcess Communication========
+NetLinks Skts
+IOCTLS
+Device files
+System Calls
+
+
