@@ -1,0 +1,10 @@
+Maarten Van Steen and Andrew S. Tanenbaum
+=========================================
+Chapter 3: Processes
+---------------------
+- More on threads and how they can be used to build applications can be found in 
+  - Lewis and Breg, 1998
+  - Stevens, 1998
+  - Robbins and Robbins, 2003
+  - Herlihy and Shavit, 2008
+
