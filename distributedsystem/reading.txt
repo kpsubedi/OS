@@ -8,3 +8,23 @@ Chapter 3: Processes
   - Robbins and Robbins, 2003
   - Herlihy and Shavit, 2008
 
+- To understand the role of threads in distributed systems, it is important to understand 
+ - What a process is, and
+ - How processes and threads relate. 
+
+- To execute a program, an operating system creates a number of virtual processors, each one for running a different program.
+- To keep track of these virtual processors, the operating system has a process table, containing entries to store 
+  - CPU register values,
+  - memory maps,
+  - open files,
+  - accounting information, 
+  - privileges, etc.
+- Jointly, these entries form a process context. 
+
+- A process is often defined as a program in execution, that is, a program that is currently being executed on one of the 
+  operating system's virtual processors. An important issue is that the operating system takes great care to ensure that 
+  independent processes cannot maliciously or inadvertently affect the correctness of each other''s behavior. 
+- In other words, the fact that multiple processes may be concurrently sharing the same CPU and other hardware resources
+  is made transparent. Usually, the operating system requires hardware support to enforce this separation. 
+- This concurrency transparency comes at a price. For example, each time a process is created, the operating system must 
+  create a complete independent address space. 
