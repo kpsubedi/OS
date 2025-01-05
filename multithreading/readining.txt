@@ -3,4 +3,12 @@ Introduction
 - The computer industry is undergoing, if not another revolution, certainly a vigorous shaking-up. The major chip manufactures have, for the time being at
 least, given up trying to make processors run faster. Moore's Law has not been repealed: each year, more and more transistors fit into the same space, but 
 their clock speed cannot be increased without overheating. 
-- Instead, 
+- Instead, manufactures are turning to "multicore" architectures, in which multiple processors (cores) communicate directly through shared hardware caches. 
+Multiprocessor chips make computing more efficient by exploiting parallelism: harnessing multiple processors to work on a single task.
+- The spread of multiprocessor architecures will have a pervasive effect on how we develop software. Until recently, advances in technology meant advances 
+in clock speed, so software would effectively "speed up" by itself over time. Now, however, this free ride is over. Advances in technology will mean 
+increased parallelism and not increased clock speed, and exploiting such parallelism is one of the outstanding challenges of modern Computer Science.
+- This book focuses on how to program multiprocessors that communicate via a shared memory. Such systems are often called shared-memory multiprocessors 
+or, more recently, multicores. Programming challenges arise at all scales of multiprocessor systems-at a very small scale, processors within a single 
+chip need to coordinate access to a shared memory location, and on a large scale, processors in a supercomputer need to coordinate the routing of data.
+- Multiprocessor programming is challenging because modern computer systems are inherently asynchronous: activities can 
