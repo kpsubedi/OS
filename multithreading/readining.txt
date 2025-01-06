@@ -11,4 +11,42 @@ increased parallelism and not increased clock speed, and exploiting such paralle
 - This book focuses on how to program multiprocessors that communicate via a shared memory. Such systems are often called shared-memory multiprocessors 
 or, more recently, multicores. Programming challenges arise at all scales of multiprocessor systems-at a very small scale, processors within a single 
 chip need to coordinate access to a shared memory location, and on a large scale, processors in a supercomputer need to coordinate the routing of data.
-- Multiprocessor programming is challenging because modern computer systems are inherently asynchronous: activities can 
+- Multiprocessor programming is challenging because modern computer systems are inherently asynchronous: activities can be 
+halted or delayed without warning by
+  - interrupts,
+  - preemption,
+  - cache misses,
+  - failures, and
+  - other events. 
+- These delays are inherently unpredictable, and can vary enormously in scale:
+    - a cache miss might delay a processor for fewer than ten instructions,
+    - a page fault for a few million instructions, and
+    - operating system preemption for hundreds of millions of instructions. 
+- We approach multiprocessor programming from two complementary directions: principles and practice. 
+- In the principles part of this book, we focus on computability: figuring out what can be computed in an asynchronous 
+concurrent environment. We use an idealized model of computation in which multiple concurrent threads manipulate a set 
+of shared objects. The sequence of the thread operations on the objects is called the concurrent program or concurrent 
+algorithm. This model is essentially the model presented by tje Java, C#, or C++ thread packages. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
