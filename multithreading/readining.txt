@@ -44,7 +44,15 @@ of concurrent shared-memory computability as a necessary step.
 - The chapters dealing with principles take the reader through a quick tour of asynchronous computability, attempting to 
 expose various computability issues, and how they are addressed through the use of hardware and software mechanisms. 
 
-- An important step 
+- An important step in the understanding of computability is the specification and verification of what a given program actually does. 
+This is perhaps best described as program correctness. The correctness of multiprocessor programs, by their nature, is more complex 
+than that of their sequential counterparts, and requires a different set of tools, even for the purpose of "informal reasoning" 
+(which, of course, is what most programmers actually do). Sequential correctness is mostly concerned with safety properties. A safety 
+property states that some "bad thing" never happens. For example, a traffic light never displays green in all directions, even if the 
+power fails. Natually, concurrent correctness is also concerned with safety, but the problem is much, much harder, because safety must 
+be ensured despite the vast number of ways that the steps of concurrent threads can be interleaved. Equally important, concurrent 
+correctness encompasses a variety of liveness properties that have no counterparts in the sequential world. 
+
 
 
 
