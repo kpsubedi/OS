@@ -1,0 +1,16 @@
+Assignment-1
+------------
+Q1. Download the source code from this link: https://github.com/kpsubedi/OS/blob/master/linux/process_hw1.c. Answer the following 
+questions. 
+
+a. comment the lines 8-10. compile and run the code. Submit the output of the program and 
+explain why you receive the output. [10]
+
+b. comment the lines 9-10. compile and run the code. Submit the output of the program and 
+explain why you receive the output. [10]
+
+b. comment the lines 10. compile and run the code. Submit the output of the program and 
+explain why you receive the output. [10]
+
+Q2. Execute the command :() {:|:&};: on the Linux VM. Explain how this command works. [20]
+
