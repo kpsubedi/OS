@@ -1,2 +1,8 @@
 [SELinux]
 
+- SELinux  is the most popular Linux Security Module (LSM) used to isolate and protect system components from one another.
+- One question that immediately comes to mind on such a multi-user system is ownership. A use may own, for example, a file. After assigning an owner, the next question to naturally come up is: can a user interact with resource owned by another user? 
+- This has led to the development of Access Control, which is a standard used to define permissions on systems. 
+- Access Conrol can be divided into two main types: Discretionary Access Control (DAC) and Mandatory Access Control (MAC). 
+- Discretionary Access Control is based around owners, where an owner can decide who has access to its resources. DACs are used in all modern day operating systems. For example, POSIX operating systems assign an owner to each file/directory who can decide how users in its group and outside its group can interact with the file. Another example is Windows, NTFS permissions are slightly more complex allowing for overlapping allow and deny permissions, but still follow an owner-centric model. 
+- 
