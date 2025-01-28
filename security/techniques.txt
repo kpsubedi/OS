@@ -1,4 +1,5 @@
 [SELinux]
+- SELinux emerged from research by the National Security Agency and implements classic strong-security measures such as role-based access controls, mandatory access controls, and fine-grained transitions and privilege escalation following the principle of least privilege. It compensates for the inevitable buffer overflows and other weaknesses in applications by isolating them and preventing flaws in one application from spreading to others. 
 
 [[Terminology]]
 These give a brief introduction to the major components that form the core SELinux infrastructure. 
