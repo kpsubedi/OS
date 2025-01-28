@@ -4,11 +4,14 @@
   - LP: seccomp, capabilities
   - isolation: hardware assisted virtualization, chroot, namespaces, lxc
 
+How do linux containers come about and how we can use them in different scenarioes?
 
 Privilege Separation
 --------------------
-- Least Privilege (LP)
-- Segregation of Duties (SoD)
+What are the two key concepts to privilege separation?
+
+- Least Privilege (LP) : Which basically means that you only assign the minimal set of privileges that a particular process of a particular user it requires to execute or carry out its function.
+- Segregation of Duties (SoD) : 
 
 What are the technical controls we have to achieve the privilege separation?
 
