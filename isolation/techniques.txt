@@ -11,7 +11,11 @@ Privilege Separation
 What are the two key concepts to privilege separation?
 
 - Least Privilege (LP) : Which basically means that you only assign the minimal set of privileges that a particular process of a particular user it requires to execute or carry out its function.
-- Segregation of Duties (SoD) : 
+- Segregation of Duties (SoD) : This means that for example if you are a financial controller and you approve financial transcations within a company you shouldn't be the same person making a purchase and then you approve it yourself there should be some segregation of duties so that you're being checked by something. 
+
+* No single principle should have too MANY PRIVILEGES.
+
+
 
 What are the technical controls we have to achieve the privilege separation?
 
