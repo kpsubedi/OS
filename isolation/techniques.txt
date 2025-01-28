@@ -17,9 +17,10 @@ What are the two key concepts to privilege separation?
 
 
 
-What are the technical controls we have to achieve the privilege separation?
+How do we implement privilege separation in practice? What are the technical controls we have to achieve the privilege separation?
 
-- Discretionary Access Control (DAC): implemented in UNIX as file permission 
+So you might be familiar with discretionary access control (DAC).
+- Discretionary Access Control (DAC): implemented in UNIX as file permission for example if 
 
 
 
