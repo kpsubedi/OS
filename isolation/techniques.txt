@@ -20,7 +20,30 @@ What are the two key concepts to privilege separation?
 How do we implement privilege separation in practice? What are the technical controls we have to achieve the privilege separation?
 
 So you might be familiar with discretionary access control (DAC).
-- Discretionary Access Control (DAC): implemented in UNIX as file permission for example if 
+- Discretionary Access Control (DAC): implemented in UNIX as file permission for example if I would have an executable file it would have the executable bit set on it. 
+- WHY is it called DISCRETIONARY ACCESS CONTROL (DAC) because the permissions on those files are determined at the users discretion so as long as I own the file I can 
+change the file permissions for the file access controls. 
+
+How do we implement the least privilege?
+
+- The Linux kernel is not exactly designed for security whenever you have an application that's running on a kernel you are basically exposed to all the kernel functions they are available to you. All the kernel system calls are available for you to call. 
+- So a couple of different technical controls:
+
+* seccomp: Which basically filters the number of system calls limits the number of system calls that you can make within a specific application.
+* capabilities: Which attempts to explode root capability into different capabilities. So for example you know currently Linux root is all powerful capabilities aim to explode the capabilities of root to shard it and then assign only the capabilities that you need to run the application. So that's least privilege. 
+- Isolation: For example if you're running a virtual machine for your lab that's hardware-assisted virtualization that is one form of isolation. 
+- Containers: Which is how many ways to change for namespaces and related technologies. 
+
+I will go through three different stories of how containers might be useful on three different scenarios and 
+Once Upon a Network ....(1)
+Alice runs a VERY CONTROVERSIAL website ...
+Her PHP application gets POPPED 
+or her MySQL server is compromised 
+or her Wordpress plugin gives RCE
+or {...}
+
+She wants to add security, but now?
+
 
 
 
