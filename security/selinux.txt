@@ -17,4 +17,10 @@ Frank Mayer, Karl MacMillan, David Caplan
 
 [Part III]
 - Two primary methods developed to build SELinux policies: the example policy and the reference policy
+- Impacts of SELinux on system administration 
+- How to write policy modules for SELinux
 
+[Chapter 1. Background]
+[[1.1 The Inevitability of Software Failure]]
+
+Security Enhanced Linux (SELinux) is an exciting new technology for securing our computer networks and systems. In a real sense, it represents the culmination 
