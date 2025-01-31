@@ -21,6 +21,10 @@ Frank Mayer, Karl MacMillan, David Caplan
 - How to write policy modules for SELinux
 
 [Chapter 1. Background]
+
+Security Enhanced Linux (SELinux) is an exciting new technology for securing our computer networks and systems. In a real sense, it represents the culmination of nearly 40 years of operating system security research. For the first time, we have a powerful, flexible, mandatory access control mechanism incorporated into a mainstream, widely distributed in operating system. In this chapter, we provide a brief overview of the history of secure operating system research as a means to motivate and set into perspective the value that SELinux brings to today's computer security challenges. 
+
 [[1.1 The Inevitability of Software Failure]]
 
-Security Enhanced Linux (SELinux) is an exciting new technology for securing our computer networks and systems. In a real sense, it represents the culmination 
+
+
