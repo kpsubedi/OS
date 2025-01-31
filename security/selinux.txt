@@ -16,4 +16,5 @@ Frank Mayer, Karl MacMillan, David Caplan
 - Object labeling in SELinux 
 
 [Part III]
-- Two 
+- Two primary methods developed to build SELinux policies: the example policy and the reference policy
+
