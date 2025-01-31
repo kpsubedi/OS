@@ -26,5 +26,8 @@ Security Enhanced Linux (SELinux) is an exciting new technology for securing our
 
 [[1.1 The Inevitability of Software Failure]]
 
+Appropriately enough, we derive the title of this first section of a book on SELinux from a paper that the principle creators of SELinux coauthored before the SELinux project was even started. The authors of that paper pointed out that software is flawed, and that too much of the software being developed assumes that applications can enforce security without the support of the underlying operating systems. As they note:
 
+" The necessity of operating system security to overall system security is undeniable... If it fails to meet this responsibility, system-wide vulnerabiliites will result. A design that tries to create security without the support of the underlying operating system is a "fortress built upon sand" with no secure foundation upon which to sit. 
+In the years since that paper was published in 1998, the problem of flawed application software has become practically an everyday news headline. 
 
