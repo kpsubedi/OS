@@ -1,3 +1,19 @@
 [SELinux by Example]
 
 Using Security Enhanced Linux
+Frank Mayer, Karl MacMillan, David Caplan
+
+[Preface]
+
+
+[Part I]
+- Overview of mandatory access control (MAC)
+- Type enforcement concepts and applications
+- SELinux architecture and mechanisms 
+
+[Part II]
+- Details of the SELinux native policy language syntax and semantics 
+- Object labeling in SELinux 
+
+[Part III]
+- Two 
