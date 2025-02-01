@@ -37,4 +37,15 @@ With SELinux, we have made a great stride toward moving our "fortress" off the s
 
 [[1.2 The Evolution of Access Control Security in Operating Systems]]
 
-Early operating systems had little or no security; a user could access any file or resource just by knowing how to name the resource. Fortunately, it was not long before access control mechanisms began to emerge to provide some sense of security. 
+Early operating systems had little or no security; a user could access any file or resource just by knowing how to name the resource. Fortunately, it was not long before access control mechanisms began to emerge to provide some sense of security.
+
+
+
+==========================
+https://github.com/SELinuxProject/selinux-notebook/blob/main/src/title.md
+
+Terminology
+-----------
+These give a brief introduction to the major components that form the core SELinux infrastructure. 
+
+
