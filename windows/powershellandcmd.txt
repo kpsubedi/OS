@@ -1,0 +1,6 @@
+Command Prompt 
+- Introduced in 1918. 
+- Output of the commands in text form.
+- Can only run batch commands.
+- Command output cannot be chain to other command. 
+- 
